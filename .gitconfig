@@ -1,5 +1,16 @@
+[alias]
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+[color]
+	ui = 1
+
+[core]
+	autocrlf = input
+	safecrlf = true
+
 [push]
 	default = simple
+
 [user]
 	name = Leigh Simpson
 	email = code@simpleigh.com
