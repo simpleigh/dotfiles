@@ -115,5 +115,3 @@ fi
 
 [ -f ~/.ssh/agent_env ] && . ~/.ssh/agent_env
 kill -0 $SSH_AGENT_PID 2> /dev/null || . <(ssh-agent | tee ~/.ssh/agent_env)
-
-complete -C '/usr/local/bin/aws_completer' aws
