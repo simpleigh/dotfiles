@@ -10,4 +10,8 @@
 /.cache/
 /.hawser
 /.lesshst
+/.mysql_history
+/.nano_history
+/.php_history
+/.psql_history
 /.ssh/
