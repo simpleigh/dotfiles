@@ -7,6 +7,7 @@
 [core]
 	autocrlf = input
 	safecrlf = true
+	excludesfile = ~/.cvsignore
 
 [push]
 	default = simple

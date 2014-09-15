@@ -1,0 +1,85 @@
+# Autotools
+
+/autom4te.cache/
+/aclocal.m4
+/config.h.in
+/config.h.in~
+/config.log
+/config.status
+/configure
+/stamp-h1
+
+.deps/
+.dirstamp
+Makefile.in
+
+
+# Eclipse IDE
+
+/.buildpath
+/.cproject
+/.project
+/.settings/
+/.tern-project
+
+
+# Executables
+
+*.app
+*.exe
+*.hex
+*.i*86
+*.out
+*.x86_64
+
+
+# GCC Test Coverage
+
+*.gcda
+*.gcno
+*.gcov
+
+
+# Libraries
+
+*.a
+*.la
+*.lai
+*.lib
+*.lo
+
+
+# Object Files
+
+*.elf
+*.ko
+*.o
+*.obj
+*.slo
+
+
+# OS Files
+
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+
+# Patch Backups
+
+*.orig
+
+
+# Precompiled Headers
+
+*.gch
+*.pch
+
+
+# Shared Objects
+
+*.dll
+*.dylib
+*.so
+*.so.*
