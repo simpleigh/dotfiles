@@ -69,6 +69,7 @@ Thumbs.db
 # Patch Backups
 
 *.orig
+*.rej
 
 
 # Precompiled Headers
