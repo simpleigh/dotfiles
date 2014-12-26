@@ -79,6 +79,12 @@ Thumbs.db
 *.pch
 
 
+# Python Compilation
+
+*.pyc
+__pycache__/
+
+
 # Shared Objects
 
 *.dll
