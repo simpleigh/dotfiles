@@ -19,6 +19,7 @@ Makefile.in
 /.buildpath
 /.cproject
 /.project
+/.pydevproject
 /.settings/
 /.tern-project
 
