@@ -8,6 +8,10 @@
 	autocrlf = input
 	safecrlf = true
 	excludesfile = ~/.cvsignore
+	whitespace = tabwidth=4
+
+[fetch]
+	prune = true
 
 [push]
 	default = simple
