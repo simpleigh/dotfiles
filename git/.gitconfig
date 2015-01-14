@@ -1,5 +1,16 @@
 [alias]
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	a = add
+	b = branch
+	co = checkout
+	ci = commit
+	d = diff
+	f = fetch
+	g = grep
+	h = hist
+	l = log
+	r = reset
+	s = status
 
 [color]
 	ui = 1
