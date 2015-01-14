@@ -113,5 +113,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -f ~/.ssh/agent_env ] && . ~/.ssh/agent_env
-kill -0 $SSH_AGENT_PID 2> /dev/null || . <(ssh-agent | tee ~/.ssh/agent_env)
+for FILE in .bashrc.d/*; do
+    source "$FILE"
+done
