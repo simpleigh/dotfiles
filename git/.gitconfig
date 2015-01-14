@@ -4,6 +4,15 @@
 [color]
 	ui = 1
 
+[color "grep"]
+	context = normal
+	filename = magenta
+	function = normal
+	linenumber = green
+	match = red bold
+	selected = normal
+	separator = cyan
+
 [core]
 	autocrlf = input
 	safecrlf = true
