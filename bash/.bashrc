@@ -17,6 +17,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-for FILE in .bashrc.d/*; do
+for FILE in "$HOME"/.bashrc.d/*; do
     source "$FILE"
 done
+unset -v $FILE
