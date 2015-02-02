@@ -20,4 +20,4 @@ fi
 for FILE in "$HOME"/.bashrc.d/*; do
     source "$FILE"
 done
-unset -v $FILE
+unset -v FILE
