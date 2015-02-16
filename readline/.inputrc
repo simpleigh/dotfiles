@@ -3,7 +3,7 @@ set bell-style none
 set show-all-if-ambiguous on
 
 # some defaults / modifications for the emacs mode
-set mode emacs
+set editing-mode emacs
 
 # allow the use of the Home/End keys
 "\e[1~": beginning-of-line
