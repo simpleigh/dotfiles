@@ -30,6 +30,9 @@
 	excludesfile = ~/.gitignore-global
 	whitespace = tabwidth=4
 
+[credential]
+	helper = cache
+
 [fetch]
 	prune = true
 
