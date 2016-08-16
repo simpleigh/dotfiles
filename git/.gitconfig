@@ -39,6 +39,9 @@
 [push]
 	default = simple
 
+[status]
+	submodulesummary = true
+
 [user]
 	name = Leigh Simpson
 	email = code@simpleigh.com
