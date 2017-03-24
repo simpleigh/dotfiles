@@ -5,7 +5,7 @@
 	co = checkout
 	ci = commit
 	d = diff
-	f = fetch
+	f = fetch --all --tags
 	g = grep
 	h = hist
 	l = log
