@@ -1,6 +1,7 @@
 [alias]
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	a = add
+	amend = ci --amend --reuse-message HEAD
 	b = branch
 	co = checkout
 	ci = commit
