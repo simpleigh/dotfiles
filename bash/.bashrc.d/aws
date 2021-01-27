@@ -1,0 +1,5 @@
+# Bash completion for the AWS CLI
+
+if [[ `which aws_completer` ]]; then
+    complete -C "`which aws_completer`" aws
+fi
