@@ -1,0 +1,8 @@
+# When the first word of a simple command cannot be executed, try to cd to it.
+shopt -s autocd
+
+# Attempt spelling correction on each directory component of an argument to cd.
+shopt -s cdspell
+
+# Enable extended directory and subdirectory matching with the special ** pattern.
+shopt -s globstar
