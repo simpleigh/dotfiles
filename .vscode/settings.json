@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "**/bash/**": "shellscript",
+        ".pypirc": "ini",
+        "**/subversion/**": "ini"
+    }
+}
