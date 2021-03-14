@@ -1,3 +1,13 @@
-# Bash completion for the AWS CLI
+##
+# AWS Command Line Interface
+#
+# @see https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
+##
+
+##
+# Command completion
+#
+# @see https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
+##
 
 [ $(which aws_completer) ] && complete -C "$(which aws_completer)" aws

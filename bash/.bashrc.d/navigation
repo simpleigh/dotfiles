@@ -1,3 +1,7 @@
+##
+# Miscellaneous options related to navigation
+##
+
 # When the first word of a simple command cannot be executed, try to cd to it.
 shopt -s autocd
 
