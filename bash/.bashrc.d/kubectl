@@ -1,0 +1,20 @@
+##
+# kubectl controls the Kubernetes cluster manager
+#
+# No installation necessary when using Docker Desktop and WSL.
+#
+# @see https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+##
+
+if [ $(which kubectl) ]; then
+    # Add an alias to save typing
+    alias k=kubectl
+
+    ##
+    # bash auto-completion
+    #
+    # @see https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-bash-linux/
+    ##
+    source <(kubectl completion bash)
+    complete -F __start_kubectl k
+fi

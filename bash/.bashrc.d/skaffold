@@ -1,0 +1,16 @@
+##
+# Skaffold is a command line tool that facilitates continuous development for
+# Kubernetes-native applications
+#
+# Installation:
+#     curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
+#     sudo install skaffold /usr/local/bin/
+#
+# @see https://skaffold.dev/docs/install/
+##
+
+##
+# bash auto-completion
+##
+
+[ $(which skaffold) ] && source <(skaffold completion bash)
