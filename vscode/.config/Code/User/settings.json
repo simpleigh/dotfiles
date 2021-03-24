@@ -1,4 +1,5 @@
 {
+    "aws.telemetry": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
