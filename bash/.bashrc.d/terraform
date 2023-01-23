@@ -1,0 +1,12 @@
+##
+# CLI for HashiCorp Terraform
+#
+# @see https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+##
+
+if [ $(which terraform) ]; then
+    ##
+    # bash auto-completion
+    ##
+    complete -C /usr/bin/terraform terraform
+fi

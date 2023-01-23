@@ -1,0 +1,16 @@
+##
+# Telepresence is an open source tool that enables you to set up remote development environments for Kubernetes
+#
+# Installation:
+#     curl -fL https://app.getambassador.io/download/tel2/linux/amd64/latest/telepresence
+#     sudo install telepresence /usr/local/bin/
+#
+# @see https://www.telepresence.io/docs/latest/quick-start/?os=gnu-linux
+##
+
+if [ $(which telepresence) ]; then
+    ##
+    # bash auto-completion
+    ##
+    source <(telepresence completion bash)
+fi
