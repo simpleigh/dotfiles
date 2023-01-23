@@ -2,30 +2,47 @@
 # Bash prompt
 ##
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# colour prompt with command history count
-DEBROOT='${debian_chroot:+($debian_chroot)}'
 PROMPT_RED='\[\033[01;31m\]'
 PROMPT_GREEN='\[\033[01;32m\]'
 PROMPT_YELLOW='\[\033[01;33m\]'
 PROMPT_BLUE='\[\033[01;34m\]'
+PROMPT_MAGENTA='\[\033[01;35m\]'
 PROMPT_NONE='\[\033[00m\]'
 
+PS1=''
+
+# chroot information
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+PS1="${PS1}${debian_chroot:+($debian_chroot)}"
+
+# username and hostname coloured according to access
 if [[ $EUID -eq 0 ]]; then
-        PS1="${DEBROOT}${PROMPT_RED}\u@\h${PROMPT_NONE}:${PROMPT_YELLOW}\!${PROMPT_NONE}:${PROMPT_BLUE}\w${PROMPT_NONE}\$ "
+    PS1="${PS1}${PROMPT_RED}\u@\h${PROMPT_NONE}"
 else
-        PS1="${DEBROOT}${PROMPT_GREEN}\u@\h${PROMPT_NONE}:${PROMPT_YELLOW}\!${PROMPT_NONE}:${PROMPT_BLUE}\w${PROMPT_NONE}\$ "
+    PS1="${PS1}${PROMPT_GREEN}\u@\h${PROMPT_NONE}"
 fi
 
-unset DEBROOT
+# command history count
+PS1="${PS1}:${PROMPT_YELLOW}\!${PROMPT_NONE}"
+
+# current directory
+PS1="${PS1}:${PROMPT_BLUE}\w${PROMPT_NONE}"
+
+# kubernetes context
+if [ $(which kubectl) ]; then
+    PS1="${PS1}:${PROMPT_MAGENTA}\$(kubectl config current-context)${PROMPT_NONE}"
+fi
+
+# $
+PS1="${PS1}\$ "
+
 unset PROMPT_RED
 unset PROMPT_GREEN
 unset PROMPT_YELLOW
 unset PROMPT_BLUE
+unset PROMPT_MAGENTA
 unset PROMPT_NONE
 
 PROMPT_DIRTRIM=8
