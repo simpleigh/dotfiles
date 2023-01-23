@@ -6,7 +6,7 @@
 
 if [ $(which aws_completer) ]; then
     ##
-    # Command completion
+    # bash auto-completion
     #
     # @see https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
     ##

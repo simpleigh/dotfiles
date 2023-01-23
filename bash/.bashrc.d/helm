@@ -11,7 +11,7 @@
 
 if [ $(which helm) ]; then
     ##
-    # Helm Completion Bash
+    # bash auto-completion
     #
     # @see https://helm.sh/docs/helm/helm_completion_bash/
     ##

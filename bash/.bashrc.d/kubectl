@@ -2,6 +2,9 @@
 # kubectl controls the Kubernetes cluster manager
 #
 # No installation necessary when using Docker Desktop and WSL.
+# To pin a specific version:
+#     sudo apt-get install kubectl=${VERSION}-00
+#     sudo apt-mark hold kubectl
 #
 # @see https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 ##
