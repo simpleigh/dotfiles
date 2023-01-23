@@ -9,8 +9,9 @@
 # @see https://skaffold.dev/docs/install/
 ##
 
-##
-# bash auto-completion
-##
-
-[ $(which skaffold) ] && source <(skaffold completion bash)
+if [ $(which skaffold) ]; then
+    ##
+    # bash auto-completion
+    ##
+    source <(skaffold completion bash)
+fi
