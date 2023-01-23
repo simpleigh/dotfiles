@@ -14,16 +14,6 @@
 Makefile.in
 
 
-# Eclipse IDE
-
-/.buildpath
-/.cproject
-/.project
-/.pydevproject
-/.settings/
-/.tern-project
-
-
 # Executables
 
 *.app
@@ -83,6 +73,11 @@ Thumbs.db
 
 *.pyc
 __pycache__/
+
+
+# Python virtual environments
+
+/env/
 
 
 # Shared Objects
