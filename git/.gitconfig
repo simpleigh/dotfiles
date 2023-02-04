@@ -13,9 +13,6 @@
 	r = reset
 	s = status
 
-[color]
-	ui = 1
-
 [color "grep"]
 	context = normal
 	filename = magenta
@@ -26,24 +23,59 @@
 	separator = cyan
 
 [core]
-	autocrlf = input
+	# If true, makes Git check if converting `CRLF` is reversible when
+	# end-of-line conversion is active
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresafecrlf
 	safecrlf = true
-	excludesfile = ~/.gitignore-global
+
+	# This variable can be set to `input`, in which case no output conversion is
+	# performed.
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreautocrlf
+	autocrlf = input
+
+	# Specifies the pathname to the file that contains patterns to describe
+	# paths that are not meant to be tracked
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreexcludesFile
+	excludesFile = ~/.gitignore-global
+
+	# Commands such as `commit` and `tag` that let you edit messages consider a
+	# line that begins with this character commented, and removes them after the
+	# editor returns (default #).
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-corecommentChar
+	commentChar = ";"
+
+	# A comma separated list of common whitespace problems to notice
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-corewhitespace
 	whitespace = tabwidth=4
 
 [credential]
+	# Specify an external helper to be called when a username or password
+	# credential is needed.
+	# `cache` will cache credentials in memory for a short period of time
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-credentialhelper
 	helper = cache
 
 [fetch]
+	# If true, fetch will automatically behave as if the `--prune` option was
+	# given on the command line.
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-fetchprune
 	prune = true
 
 [grep]
+	# If set to true, enable `-n` option by default.
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-greplineNumber
 	lineNumber = true
 
 [push]
+	# Defines the action `git push` should take if no refspec is given
+	# `simple` pushes the current branch with the same name on the remote
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault
 	default = simple
 
 [status]
+	# If this is set to true, the submodule summary will be enabled and a
+	# summary of commits for modified submodules will be shown
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-statussubmoduleSummary
 	submodulesummary = true
 
 [user]
