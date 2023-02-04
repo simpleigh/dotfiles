@@ -2,12 +2,25 @@
 # Bash prompt
 ##
 
-PROMPT_RED='\[\033[01;31m\]'
-PROMPT_GREEN='\[\033[01;32m\]'
-PROMPT_YELLOW='\[\033[01;33m\]'
-PROMPT_BLUE='\[\033[01;34m\]'
-PROMPT_MAGENTA='\[\033[01;35m\]'
 PROMPT_NONE='\[\033[00m\]'
+
+FG_BLACK='\[\033[01;30m\]'
+FG_RED='\[\033[01;31m\]'
+FG_GREEN='\[\033[01;32m\]'
+FG_YELLOW='\[\033[01;33m\]'
+FG_BLUE='\[\033[01;34m\]'
+FG_MAGENTA='\[\033[01;35m\]'
+FG_CYAN='\[\033[01;36m\]'
+FG_WHITE='\[\033[01;37m\]'
+
+BG_BLACK='\[\033[01;40m\]'
+BG_RED='\[\033[01;41m\]'
+BG_GREEN='\[\033[01;42m\]'
+BG_YELLOW='\[\033[01;43m\]'
+BG_BLUE='\[\033[01;44m\]'
+BG_MAGENTA='\[\033[01;45m\]'
+BG_CYAN='\[\033[01;46m\]'
+BG_WHITE='\[\033[01;47m\]'
 
 PS1=''
 
@@ -19,30 +32,44 @@ PS1="${PS1}${debian_chroot:+($debian_chroot)}"
 
 # username and hostname coloured according to access
 if [[ $EUID -eq 0 ]]; then
-    PS1="${PS1}${PROMPT_RED}\u@\h${PROMPT_NONE}"
+    PS1="${PS1}${FG_RED}\u@\h${PROMPT_NONE}"
 else
-    PS1="${PS1}${PROMPT_GREEN}\u@\h${PROMPT_NONE}"
+    PS1="${PS1}${FG_GREEN}\u@\h${PROMPT_NONE}"
 fi
-
-# command history count
-PS1="${PS1}:${PROMPT_YELLOW}\!${PROMPT_NONE}"
-
-# current directory
-PS1="${PS1}:${PROMPT_BLUE}\w${PROMPT_NONE}"
 
 # kubernetes context
 if [ $(which kubectl) ]; then
-    PS1="${PS1}:${PROMPT_MAGENTA}\$(kubectl config current-context)${PROMPT_NONE}"
+    PS1="${PS1}:${FG_MAGENTA}\$(kubectl config current-context)${PROMPT_NONE}"
 fi
+
+# git branch
+PS1="${PS1}:${FG_YELLOW}\$(git branch --show-current 2>/dev/null)${PROMPT_NONE}"
+
+# current directory
+PS1="${PS1}:${FG_BLUE}\w${PROMPT_NONE}"
+
+# number of trailing directory components to retain
+PROMPT_DIRTRIM=8
 
 # $
 PS1="${PS1}\$ "
 
-unset PROMPT_RED
-unset PROMPT_GREEN
-unset PROMPT_YELLOW
-unset PROMPT_BLUE
-unset PROMPT_MAGENTA
 unset PROMPT_NONE
 
-PROMPT_DIRTRIM=8
+unset FG_BLACK
+unset FG_RED
+unset FG_GREEN
+unset FG_YELLOW
+unset FG_BLUE
+unset FG_MAGENTA
+unset FG_CYAN
+unset FG_WHITE
+
+unset BG_BLACK
+unset BG_RED
+unset BG_GREEN
+unset BG_YELLOW
+unset BG_BLUE
+unset BG_MAGENTA
+unset BG_CYAN
+unset BG_WHITE
