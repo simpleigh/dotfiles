@@ -39,7 +39,7 @@ fi
 
 # kubernetes context
 if [ $(which kubectl) ]; then
-    PS1="${PS1}:${FG_MAGENTA}\$(kubectl config current-context)${PROMPT_NONE}"
+    PS1="${PS1}:${FG_MAGENTA}\$(kubectl config current-context 2>/dev/null)${PROMPT_NONE}"
 fi
 
 # git branch
