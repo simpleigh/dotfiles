@@ -13,6 +13,12 @@
 	r = reset
 	s = status
 
+[blame]
+	# Ignore revisions listed in the file, one unabbreviated object name per line,
+	# in `git-blame`
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-blameignoreRevsFile
+	ignoreRevsFile = .git-blame-ignore-revs
+
 [color "grep"]
 	context = normal
 	filename = magenta
