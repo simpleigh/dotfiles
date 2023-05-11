@@ -1,0 +1,10 @@
+##
+# Set the `LS_COLORS` environment variable
+# @see dircolors(1)
+##
+
+if [ -s ~/.dircolors ]; then
+    eval "$(dircolors -b ~/.dircolors)"
+else
+    eval "$(dircolors -b)"
+fi

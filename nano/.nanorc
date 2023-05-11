@@ -1,0 +1,20 @@
+##
+# GNU nano's configuration file
+# @see nanorc(5)
+##
+
+# Automatically indent a newly created line to the same number of tabs and/or
+# spaces as the previous line.
+set autoindent
+
+# Do not use the line below the title bar, leaving it entirely blank.
+set emptyline
+
+# Disable vim-style lock-files for when editing files.
+unset locking
+
+# Use a tab size of number columns.
+set tabsize 4
+
+# Convert typed tabs to spaces.
+set tabstospaces
