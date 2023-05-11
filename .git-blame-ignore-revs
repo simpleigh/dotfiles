@@ -1,0 +1,5 @@
+# Commits to ignore from the `git blame` view
+# @see https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file#ignore-commits-in-the-blame-view
+
+# Build hygiene
+3ad252492f78a202617a4648c4c258c48e6dba38
