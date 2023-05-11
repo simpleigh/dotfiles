@@ -2,6 +2,9 @@
 # Bash prompt
 ##
 
+# Don't warn about unused colour variables
+# shellcheck disable=SC2034
+
 PROMPT_NONE='\[\033[00m\]'
 
 FG_BLACK='\[\033[01;30m\]'
@@ -25,20 +28,20 @@ BG_WHITE='\[\033[01;47m\]'
 PS1=''
 
 # chroot information
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+if [[ -z "${debian_chroot:-}" ]] && [[ -r /etc/debian_chroot ]]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
-PS1="${PS1}${debian_chroot:+($debian_chroot)}"
+PS1="${PS1}${debian_chroot:+(${debian_chroot})}"
 
 # username and hostname coloured according to access
-if [[ $EUID -eq 0 ]]; then
+if [[ ${EUID} -eq 0 ]]; then
     PS1="${PS1}${FG_RED}\u@\h${PROMPT_NONE}"
 else
     PS1="${PS1}${FG_GREEN}\u@\h${PROMPT_NONE}"
 fi
 
 # kubernetes context
-if [ $(which kubectl) ]; then
+if [[ -n $(which kubectl) ]]; then
     PS1="${PS1}:${FG_MAGENTA}\$(kubectl config current-context 2>/dev/null)${PROMPT_NONE}"
 fi
 

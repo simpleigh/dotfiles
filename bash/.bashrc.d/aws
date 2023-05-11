@@ -4,7 +4,7 @@
 # @see https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
 ##
 
-if [ $(which aws_completer) ]; then
+if [[ -n $(which aws_completer) ]]; then
     ##
     # bash auto-completion
     #

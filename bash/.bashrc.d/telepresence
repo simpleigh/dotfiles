@@ -8,7 +8,7 @@
 # @see https://www.telepresence.io/docs/latest/quick-start/?os=gnu-linux
 ##
 
-if [ $(which telepresence) ]; then
+if [[ -n $(which telepresence) ]]; then
     ##
     # bash auto-completion
     ##

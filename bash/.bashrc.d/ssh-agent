@@ -5,5 +5,8 @@
 # @see https://blog.simpleigh.com/2013/04/ssh-agent/
 ##
 
-[ -f ~/.ssh/agent_env ] && . ~/.ssh/agent_env
-kill -0 $SSH_AGENT_PID 2> /dev/null || . <(ssh-agent | tee ~/.ssh/agent_env)
+# Don't warn that SSH_AGENT_PID is unassigned (it's set in the line above)
+# shellcheck disable=SC2154
+
+[[ -f ~/.ssh/agent_env ]] && . ~/.ssh/agent_env
+kill -0 "${SSH_AGENT_PID}" 2> /dev/null || . <(ssh-agent | tee ~/.ssh/agent_env)

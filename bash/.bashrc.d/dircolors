@@ -3,7 +3,7 @@
 # @see dircolors(1)
 ##
 
-if [ -s ~/.dircolors ]; then
+if [[ -s ~/.dircolors ]]; then
     eval "$(dircolors -b ~/.dircolors)"
 else
     eval "$(dircolors -b)"

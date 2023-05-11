@@ -13,11 +13,12 @@ esac
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
+if [[ -f ~/.bash_aliases ]]; then
+    # shellcheck source=bash/.bash_aliases
     . ~/.bash_aliases
 fi
 
-for FILE in "$HOME"/.bashrc.d/*; do
-    source "$FILE"
+for FILE in "${HOME}"/.bashrc.d/*; do
+    . "${FILE}"
 done
 unset -v FILE

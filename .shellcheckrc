@@ -1,0 +1,19 @@
+##
+# Configuration file for shellcheck
+# @see https://www.shellcheck.net/
+# @see shellcheck(1)
+##
+
+# Disables a comma separated list of error codes.
+# * stop warning about missing sources (these are often command output or files
+#   provided by the distribution)
+# * allow using `which` since it gives full paths and is common enough
+# * allow use of commands without checking the error code (usually this is
+#   `which` or a command we've already checked for)
+disable=SC1090,SC1091,SC2230,SC2312
+
+# Enable optional checks. The special name `all` enables all of them.
+enable=all
+
+# Specify Bourne shell dialect.
+shell=bash

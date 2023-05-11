@@ -9,7 +9,7 @@
 # @see https://skaffold.dev/docs/install/
 ##
 
-if [ $(which skaffold) ]; then
+if [[ -n $(which skaffold) ]]; then
     ##
     # bash auto-completion
     ##

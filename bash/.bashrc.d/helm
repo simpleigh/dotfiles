@@ -9,7 +9,7 @@
 # @see https://helm.sh/docs/intro/install/#from-apt-debianubuntu
 ##
 
-if [ $(which helm) ]; then
+if [[ -n $(which helm) ]]; then
     ##
     # bash auto-completion
     #

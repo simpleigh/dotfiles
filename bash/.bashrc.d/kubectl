@@ -9,7 +9,7 @@
 # @see https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 ##
 
-if [ $(which kubectl) ]; then
+if [[ -n $(which kubectl) ]]; then
     # Add an alias to save typing
     alias k=kubectl
 

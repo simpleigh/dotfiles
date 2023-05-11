@@ -9,24 +9,25 @@
 #umask 022
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [[ -d "${HOME}/bin" ]] ; then
+    PATH="${HOME}/bin:${PATH}"
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+if [[ -d "${HOME}/.local/bin" ]] ; then
+    PATH="${HOME}/.local/bin:${PATH}"
 fi
 
 # N.b.: this file is rearranged from the system default because `.bashrc.d/aws`
-# relies on being able to find `aws_completer` in `$HOME/.local/bin`
+# relies on being able to find `aws_completer` in `${HOME}/.local/bin`
 # This also means that binaries from Python virtual environments will be loaded
 # in preference to global ones.
 
 # if running bash
-if [ -n "$BASH_VERSION" ]; then
+if [[ -n "${BASH_VERSION}" ]]; then
     # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-        . "$HOME/.bashrc"
+    if [[ -f "${HOME}/.bashrc" ]]; then
+        # shellcheck source=bash/.bashrc
+        . "${HOME}/.bashrc"
     fi
 fi

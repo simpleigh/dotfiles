@@ -8,7 +8,7 @@
 # @see https://kind.sigs.k8s.io/docs/user/quick-start
 ##
 
-if [ $(which kind) ]; then
+if [[ -n $(which kind) ]]; then
     ##
     # bash auto-completion
     ##

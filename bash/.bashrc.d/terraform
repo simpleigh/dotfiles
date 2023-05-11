@@ -4,7 +4,7 @@
 # @see https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 ##
 
-if [ $(which terraform) ]; then
+if [[ -n $(which terraform) ]]; then
     ##
     # bash auto-completion
     ##

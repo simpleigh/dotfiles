@@ -4,6 +4,6 @@
 
 BROWSER='/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'
 
-if [ -f "${BROWSER}" ]; then
+if [[ -f "${BROWSER}" ]]; then
     export BROWSER
 fi
