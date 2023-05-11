@@ -76,7 +76,7 @@
 	# Allows overriding the default branch name e.g. when initializing a new
 	# repository.
 	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-initdefaultBranch
-	defaultBranch = master
+	defaultBranch = main
 
 [push]
 	# Defines the action `git push` should take if no refspec is given
