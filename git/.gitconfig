@@ -1,5 +1,6 @@
 [alias]
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	histmd = log --first-parent --pretty=format:'* %h _%s_' --reverse
 	a = add
 	amend = commit --amend --reuse-message HEAD
 	b = branch
