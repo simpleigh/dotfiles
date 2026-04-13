@@ -3,8 +3,8 @@
 # Kubernetes-native applications
 #
 # Installation:
-#     curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
-#     sudo install skaffold /usr/local/bin/
+#     curl --fail https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 > skaffold
+#     sudo install --target-directory /usr/local/bin/ skaffold
 #
 # @see https://skaffold.dev/docs/install/
 ##
@@ -12,6 +12,8 @@
 if [[ -n $(which skaffold) ]]; then
     ##
     # bash auto-completion
+    #
+    # @see https://skaffold.dev/docs/references/cli/#skaffold-completion
     ##
     source <(skaffold completion bash)
 fi

@@ -2,8 +2,8 @@
 # minikube quickly sets up a local Kubernetes cluster
 #
 # Installation:
-#     curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
-#     sudo dpkg -i minikube_latest_amd64.deb
+#     curl --fail https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64 > minikube
+#     sudo install --target-directory /usr/local/bin/ minikube
 #
 # @see https://minikube.sigs.k8s.io/docs/start/
 ##

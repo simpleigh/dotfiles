@@ -2,11 +2,18 @@
 # kubectl controls the Kubernetes cluster manager
 #
 # No installation necessary when using Docker Desktop and WSL.
+#
+# Installation:
+#     curl --fail --location https://pkgs.k8s.io/core:/stable:/v1.35/deb/Release.key | gpg --dearmor | sudo tee /etc/apt/keyrings/kubernetes-apt-keyring.gpg > /dev/null
+#     echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.35/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+#     sudo apt-get update
+#     sudo apt-get install kubectl
+#
 # To pin a specific version:
 #     sudo apt-get install kubectl=${VERSION}-00
 #     sudo apt-mark hold kubectl
 #
-# @see https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+# @see https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management
 ##
 
 if [[ -n $(which kubectl) ]]; then
@@ -16,8 +23,8 @@ if [[ -n $(which kubectl) ]]; then
     ##
     # bash auto-completion
     #
-    # @see https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-bash-linux/
+    # @see https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#enable-shell-autocompletion
     ##
     source <(kubectl completion bash)
-    complete -F __start_kubectl k
+    complete -o default -F __start_kubectl k
 fi

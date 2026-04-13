@@ -1,0 +1,13 @@
+##
+# gh is GitHub on the command line
+#
+# Installation:
+#     curl --fail https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null
+#     echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list
+#     sudo apt-get update
+#     sudo apt-get install gh
+#
+# @see https://github.com/cli/cli/blob/trunk/docs/install_linux.md#debian
+##
+
+# NOOP: Debian package installs Bash completions

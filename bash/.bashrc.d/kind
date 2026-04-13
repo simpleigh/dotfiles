@@ -2,8 +2,8 @@
 # kind is a tool for running local Kubernetes clusters using Docker container “nodes”.
 #
 # Installation:
-#     curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64
-#     sudo install kind /usr/local/bin/
+#     curl --fail --location https://kind.sigs.k8s.io/dl/v0.31.0/kind-linux-amd64 > kind
+#     sudo install --target-directory /usr/local/bin/ kind
 #
 # @see https://kind.sigs.k8s.io/docs/user/quick-start
 ##
