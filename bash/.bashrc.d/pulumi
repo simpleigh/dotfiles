@@ -1,0 +1,18 @@
+##
+# Pulumi is an open source platform for building, deploying, and managing cloud
+# infrastructure using your favorite programming languages
+#
+# Installation:
+#     curl --fail --location https://get.pulumi.com | sh -s -- --install-root ${HOME}/.local --no-edit-path
+#
+# @see https://www.pulumi.com/docs/get-started/download-install/
+##
+
+if [[ -n $(which pulumi) ]]; then
+    ##
+    # bash auto-completion
+    #
+    # @see https://www.pulumi.com/docs/iac/cli/commands/pulumi_gen-completion/
+    ##
+    source <(pulumi gen-completion bash)
+fi
