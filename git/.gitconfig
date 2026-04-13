@@ -85,6 +85,17 @@
 	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault
 	default = simple
 
+[rebase]
+	# If set to true, git rebase will use abbreviated command names in the todo
+	# list.
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-rebaseabbreviateCommands
+	abbreviateCommands = true
+
+	# When set to true, automatically create a temporary stash entry before the
+	# operation begins, and apply it after the operation ends.
+	# @see https://git-scm.com/docs/git-config#Documentation/git-config.txt-rebaseautoStash
+	autostash = true
+
 [status]
 	# If this is set to true, the submodule summary will be enabled and a
 	# summary of commits for modified submodules will be shown
