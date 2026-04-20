@@ -2,7 +2,7 @@
 # Hugo is one of the most popular open-source static site generators.
 #
 # Installation:
-#     curl --fail --location https://github.com/gohugoio/hugo/releases/download/v0.160.1/hugo_extended_0.160.1_linux-amd64.tar.gz > hugo.tar.gz
+#     curl --fail --location https://github.com/gohugoio/hugo/releases/download/v0.160.1/hugo_extended_withdeploy_0.160.1_linux-amd64.tar.gz > hugo.tar.gz
 #     tar xzf hugo.tar.gz hugo
 #     sudo install --target-directory /usr/local/bin hugo
 #
